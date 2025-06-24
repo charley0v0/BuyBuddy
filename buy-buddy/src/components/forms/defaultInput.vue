@@ -1,5 +1,5 @@
 <template>
-    <input type="text" :placeholder="placeholder" :value="modelValue">
+    <el-input :placeholder="placeholder" v-model="modelValue"></el-input>
 </template>
 
 <script setup>
@@ -19,6 +19,6 @@ const props = defineProps({
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
