@@ -1,0 +1,73 @@
+@use '@/assets/style/variable.scss' as *;
+
+:deep(.xicon){
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon{
+    fill: white;
+    width: 20px;
+    height: 20px;
+    :deep(svg){
+        width: 20px;
+        height: 20px;
+    }
+}
+
+:deep(.large) {
+    .icon{
+        width: 24px;
+        height: 24px;
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+:deep(.small) {
+    .icon{
+        width: 14px;
+        height: 14px;
+        svg{
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.primary_circle{
+    :deep(.el-button.is-disabled.button){
+        svg > path {
+            fill:$grey-400;
+        }
+    }
+}
+
+.outline_circle{
+    :deep(.el-button.is-disabled.button){
+        svg > path {
+            fill:$grey-300;
+        }
+    }
+}
+
+.link_circle{
+    :deep(.el-button.is-disabled.button){
+        svg > path {
+            fill:$grey-300;
+        }
+    }
+}
+
+.plain_circle{
+    :deep(.el-button.is-disabled.button){
+        svg > path {
+            fill:$grey-300;
+        }
+    }
+}
