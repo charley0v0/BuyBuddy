@@ -1,0 +1,54 @@
+@use '@/assets/style/variable.scss' as *;
+
+// 客製成功訊息
+.validateSuccessIcon::before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('@/assets/svg/DoneFilled.svg'); /* 驗證成功icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: -4px;
+}
+
+// 內建失敗訊息
+.el-form-item__error{
+    letter-spacing:0.48px;
+    color:$error-dark !important;
+}
+
+.el-form-item.is-error .el-input__wrapper{
+    box-shadow: 0 0 0 1px $error-dark inset !important;
+}
+
+.el-form-item__error::before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('@/assets/svg/CloseFilled.svg'); /* 驗證失敗icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: -4px;
+}
+
+// 客製警示(黃字)成功訊息
+.validateWarnningIcon::before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('@/assets/svg/ErrorOutlineFilled.svg'); /* 驗證警示成功icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: -4px;
+}
+
+//錯誤訊息.el-form-item__error、成功訊息.validateSuccessIcon與input框的上間距
+.el-form-item--large .el-form-item__content {
+    line-height:20px
+}

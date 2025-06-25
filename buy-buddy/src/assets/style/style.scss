@@ -1,0 +1,506 @@
+@use '@/assets/style/variable.scss' as *;
+
+:root {
+  font-family: Noto Sans TC, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: $bg-light;
+  }
+  a:hover {
+    color: #747BFF;
+  }
+  button {
+    background-color: #F9F9F9;
+  }
+}
+
+*{
+  font-family: "Noto Sans TC";
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background:white;
+}
+
+hr{
+  margin:30px 0px;
+  border-top:1px solid $grey-200;
+}
+
+
+h1{
+  margin:0px;
+  font-size:48px;
+  line-height:48px;
+  letter-spacing:0.025em;
+  font-weight:700;
+}
+
+h2{
+  margin:0px;
+  font-size:30px;
+  line-height:36px;
+  letter-spacing:0.025em;
+  font-weight:700;
+  
+}
+
+h3{
+  margin:0px;
+  font-size:24px;
+  line-height:32px;
+  letter-spacing:0.025em;
+  font-weight:700;
+}
+
+h4{
+  margin:0px;
+  font-size:20px;
+  line-height:28px;
+  letter-spacing:0.025em;
+  font-weight:700;
+}
+
+h5{
+  margin:0px;
+  font-size:18px;
+  line-height:28px;
+  letter-spacing:0.025em;
+  font-weight:700;
+}
+
+h6{
+  margin:0px;
+  font-size:16px;
+  line-height:24px;
+  letter-spacing:0.025em;
+  font-weight:700;
+}
+
+a{
+  color:$blue-500;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535BF2;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 12PX 16PX;
+  font-size: 16PX;
+  font-weight: 400;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+#app {
+  margin: 0 auto;
+  width:100%;
+  min-height:100vh;
+}
+
+.card {
+  padding: 24px;
+  border-radius:4px;
+  background: $bg-light;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+//========================================================
+// 寬度
+.w-100p {
+  width: 100%;
+}
+
+//背景顏色
+.bg-white{
+  background: $bg-light;
+}
+
+.bg-grey{
+  background: $bg-dark;
+}
+
+//外框顏色
+.border-disabled {
+  border-color: $border-grey;
+}
+
+//文字顏色
+.text-grey{
+  color: $grey-500;
+}
+
+.text-grey-light{
+  color: $grey-400;
+}
+
+.text-grey-dark{
+  color: $grey-800;
+}
+
+.text-disabled {
+  color: $grey-400;
+}
+
+.text-success{
+  color: $success-dark;
+}
+
+.text-error{
+  color: $error-dark;
+}
+
+.text-warning{
+  color: $warning-dark;
+}
+
+.text-blue {
+  color:$blue-500;
+}
+
+.text-light-gray{
+  color: $grey-500;
+}
+
+//文字大小
+.ft-12{
+  font-size:12px;
+}
+
+.ft-14{
+  font-size:14px;
+}
+
+.ft-16{
+  font-size:16px;
+}
+
+.ft-18{
+  font-size:18px;
+}
+
+.p1{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.56px;
+}
+
+.p2{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.56px;
+}
+
+.p3{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.56px;
+}
+
+//文字排版
+.text-left{
+  text-align:left;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.text-right{
+  text-align:right;
+}
+
+//內容排版
+.d-flex{
+  display:flex;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.justify-center{
+  justify-content:center;
+}
+
+.justify-end{
+  justify-content:flex-end;
+}
+
+.justify-between{
+  justify-content:space-between;
+}
+
+.justify-around{
+  justify-content:space-around;
+}
+
+.align-top{
+  align-items:flex-start;
+}
+
+.align-center{
+  align-items:center;
+}
+
+.align-bottom{
+  align-items:flex-end;
+}
+
+
+//外距
+
+.mx-auto{
+  margin: 0 auto;
+}
+
+.ma-0{
+  margin:0px;
+}
+
+.mt-0{
+  margin-top:0px;
+}
+
+.mr-0{
+  margin-right:0px;
+}
+
+.mb-0{
+  margin-bottom:0px;
+}
+
+.ml-0{
+  margin-left:0px;
+}
+
+.mt-8{
+  margin-top:8px;
+}
+
+.mr-8{
+  margin-right:8px;
+}
+
+.mb-8{
+  margin-bottom:8px;
+}
+
+.ml-8{
+  margin-left:8px;
+}
+
+.mt-12{
+  margin-top:12px;
+}
+
+.mr-12{
+  margin-right:12px;
+}
+
+.mb-12{
+  margin-bottom:12px;
+}
+
+.ml-12{
+  margin-left:12px;
+}
+
+.mt-14{
+  margin-top:14px;
+}
+
+.mr-14{
+  margin-right:14px;
+}
+
+.mb-14{
+  margin-bottom:14px;
+}
+
+.ml-14{
+  margin-left:14px;
+}
+
+.mt-16{
+  margin-top:16px;
+}
+
+.mr-16{
+  margin-right:16px;
+}
+
+.mb-16{
+  margin-bottom:16px;
+}
+
+.ml-16{
+  margin-left:16px;
+}
+
+.mt-24{
+  margin-top:24px;
+}
+
+.mr-24{
+  margin-right:24px;
+}
+
+.mb-24{
+  margin-bottom:24px;
+}
+
+.ml-24{
+  margin-left:24px;
+}
+
+//內距
+
+.pa-0{
+  padding:0px;
+}
+
+.pt-0{
+  padding-top:0px;
+}
+
+.pr-0{
+  padding-right:0px;
+}
+
+.pb-0{
+  padding-bottom:0px;
+}
+
+.pl-0{
+  padding-left:0px;
+}
+
+.pt-8{
+  padding-top:8px;
+}
+
+.pr-8{
+  padding-right:8px;
+}
+
+.pb-8{
+  padding-bottom:8px;
+}
+
+.pl-8{
+  padding-left:8px;
+}
+
+.pt-12{
+  padding-top:12px;
+}
+
+.pr-12{
+  padding-right:12px;
+}
+
+.pb-12{
+  padding-bottom:12px;
+}
+
+.pl-12{
+  padding-left:12px;
+}
+
+.pt-14{
+  padding-top:14px;
+}
+
+.pr-14{
+  padding-right:14px;
+}
+
+.pb-14{
+  padding-bottom:14px;
+}
+
+.pl-14{
+  padding-left:14px;
+}
+
+.pt-16{
+  padding-top:16px;
+}
+
+.pr-16{
+  padding-right:16px;
+}
+
+.pb-16{
+  padding-bottom:16px;
+}
+
+.pl-16{
+  padding-left:16px;
+}
+
+.pt-24{
+  padding-top:24px;
+}
+
+.pr-24{
+  padding-right:24px;
+}
+
+.pb-24{
+  padding-bottom:24px;
+}
+
+.pl-24{
+  padding-left:24px;
+}
+
+
+//icon顏色
+.icon--fail {
+  fill: $error-dark;
+}
+.icon-success{
+  fill: $success-dark;
+}
+.icon-disabled {
+  fill: $grey-400;
+}
+
+
+//游標
+.cusror-pointer{
+  cursor:pointer !important;
+}
+
+
+
+

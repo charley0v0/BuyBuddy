@@ -1,0 +1,329 @@
+@use '@/assets/style/variable.scss' as *;
+
+// label input title
+.el-form-item {
+    display: flex;
+    align-items: baseline;
+}
+
+.el-form--large.el-form--label-top .el-form-item .el-form-item__label{
+    margin-bottom: 0;
+}
+
+// 檔案上傳
+.el-upload--picture-card {
+    border-style: solid; //外框線
+}
+
+.el-upload-dragger {
+    border: none;
+}
+//檔案上傳 提示
+.el-upload__tip {
+    letter-spacing: 0.5px;
+    color: #9CA3AF;
+    line-height: normal;
+}
+
+// input框內的驗證 icon
+.el-input .el-input__validateIcon {
+    display: none;
+}
+
+.el-form-item{
+    margin-bottom:16px;
+
+    .el-form-item__content{
+        display:block;
+    }
+
+    .el-form-item__error{
+        position: relative;
+    }
+}
+
+.modal-title{
+    margin:0px;
+}
+
+
+.el-tag__content{
+    font-size:14px;
+}
+
+.el-tag--large{
+    .el-tag__content{
+        font-size:16px;
+    }
+}
+
+.el-tag.el-tag--primary{
+    color:$blue-600;
+    border:1px solid $blue-100;
+    background:$blue-50;
+}
+
+.el-tag.el-tag--info{
+    color:$info-dark;
+    border:1px solid $grey-200;
+    background:$info-light;
+}
+
+.el-tag.el-tag--success{
+    color:$success-dark;
+    border:1px solid #ECFCCB;
+    background:$success-light;
+}
+
+.el-tag.el-tag--warning{
+    color:$warning-dark;
+    border:1px solid #FEF3C7;
+    background:$warning-light;
+}
+
+.el-tag.el-tag--danger{
+    color:$error-dark;
+    border:1px solid #FEE2E2;
+    background:$error-light;
+}
+
+.el-collapse{
+    border-radius:4px;
+    border:1px solid $grey-200;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+}
+
+button.el-collapse-item__header{     
+    padding:16px; 
+    &.is-active{
+        
+        border-width:0px;
+        border-radius:0px;
+        border-bottom:1px solid $grey-200;
+    }
+
+    &:focus{
+        outline:0px !important;
+    }
+
+    &:hover{
+        border-color:$grey-200;
+    }
+}
+
+.el-collapse-item__content{
+    padding:16px;
+}
+   
+.el-table-filter__bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.el-table-filter__bottom button{
+    font-size:0px !important;
+}
+.el-table-filter__bottom button:first-child::after{
+    font-size:14px;
+    content:'確認';
+}
+.el-table-filter__bottom button:nth-child(2)::after{
+    font-size:14px;
+    content:'重設';
+}
+
+.el-date-table td.today .el-date-table-cell__text {
+    color: $blue-600 !important;
+}
+
+.el-date-table td.current:not(.disabled) .el-date-table-cell__text{
+    background-color:$blue-600 !important;
+    color:white !important;
+}
+
+.el-date-table-cell__text{
+    font-size:14px;
+}
+
+.el-date-table td.end-date .el-date-table-cell__text, 
+.el-date-table td.start-date .el-date-table-cell__text{
+    background-color:$blue-600 !important;
+    color:white !important;
+}
+
+.el-date-range-picker__content.is-right{
+
+    .el-date-range-picker__header{
+        flex-direction: row-reverse;
+    }
+    
+}
+
+.el-date-picker__header{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+
+    span{
+        display:flex;
+        align-items:center;
+        height:50px;
+    }
+
+    .el-picker-panel__icon-btn{
+        margin-top:0px;
+    }
+}
+
+.el-picker-panel__content{
+    .el-date-range-picker__header{
+        display:flex;
+        align-items:center;
+    
+        button{
+            margin-top: 0px;
+            padding: 0px 16px;
+            height:30px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &:not(.is-right){
+        .el-date-range-picker__header div{
+            margin-right:0px !important;
+            margin-left:8px !important;
+            height:30px;
+            width:fit-content;
+        }
+    }
+
+    &.is-right{
+        .el-date-range-picker__header div{
+            margin-right:18px !important;
+            margin-left:0px !important;
+        }
+    }
+}
+
+#input_phone .el-form-item__error{
+    padding-top:4px;
+}
+
+.el-form-item.is-error .el-select__wrapper{
+    box-shadow: 0 0 0 1px $error-dark inset !important;
+}
+
+.el-notification.right{
+    right:40px;
+}
+
+.el-message{ 
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+    padding:10px 16px;
+
+    .el-message__icon{
+        font-size:16px;
+    }
+
+    .el-message__content{
+        font-size:14px;
+    }
+
+    &.el-message--success{
+        background:$success-light;
+        border:1px solid $success-light;
+
+        .el-message__icon{
+            color:$success-dark;
+        }
+    
+        .el-message__content{
+            color:$success-dark;
+        }
+    }
+
+    &.el-message--warning{
+        background:$warning-light;
+        border:1px solid $warning-light;
+
+        .el-message__icon{
+            color:$warning-dark;
+        }
+    
+        .el-message__content{
+            color:$warning-dark;
+        }
+    }
+
+    &.el-message--info{
+        background:$info-light;
+        border:1px solid $info-light;
+
+        .el-message__icon{
+            color:$info-dark;
+        }
+    
+        .el-message__content{
+            color:$info-dark;
+        }
+    }
+
+    &.el-message--error{
+        background:$error-light;
+        border:1px solid $error-light;
+
+        .el-message__icon{
+            color:$error-dark;
+        }
+    
+        .el-message__content{
+            color:$error-dark;
+        }
+    }
+}
+
+.el-popper.is-dark[role="tooltip"]{
+    max-width:244px;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.56px;
+}
+
+.el-select-dropdown__item{
+    font-weight:400;
+    letter-spacing: 0.56px;
+    .el-tree-node__content{
+        &:hover {
+            background-color: $blue-600 !important;
+            color: white !important;
+          }
+    }
+    
+
+    &.is-selected{
+      color:$blue-600 !important;
+    }
+}
+
+.el-tree-node__content:not(:has(.el-select-dropdown__item.is-selected)){
+    &:hover {
+        background-color: $blue-600 !important;
+       
+        .el-select-dropdown__item{
+            color: white !important;
+        }
+    }
+
+    .el-select-dropdown__item{
+        &.is-selected{
+            background-color: #F5F7FA !important;
+        }
+    }
+}
+
+.el-tree-node__content:has(.el-select-dropdown__item.is-selected){
+    background-color: #F5F7FA !important;
+}

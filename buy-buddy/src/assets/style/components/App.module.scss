@@ -1,0 +1,39 @@
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+    filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.componentMenu, .demoMenu{
+    width:250px;
+    height:100vh;
+    background-color:#545c64;
+
+    .elMenu{
+        height:100vh;
+        border:1px solid #545c64;
+    
+    }
+}
+
+.demoMenu{
+    z-index: 999;
+}
+
+.componentContent{
+    height:100vh;
+    padding:0px 40px;
+    min-width:1600px;
+}
+
+.demoContent{
+    height:100vh;
+    padding:0px;
+}
