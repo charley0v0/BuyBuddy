@@ -93,8 +93,9 @@
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
 }
 
-button.el-collapse-item__header{     
-    padding:16px; 
+.el-collapse-item__header{     
+    padding:16px;
+    box-sizing: border-box;
     &.is-active{
         
         border-width:0px;
@@ -326,4 +327,10 @@ button.el-collapse-item__header{
 
 .el-tree-node__content:has(.el-select-dropdown__item.is-selected){
     background-color: #F5F7FA !important;
+}
+
+.el-collapse-item__title{
+    padding:16px;
+    display:flex;
+    align-items:center;
 }

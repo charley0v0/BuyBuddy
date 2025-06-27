@@ -100,12 +100,6 @@
             <h2 class="text-blue">Carousel</h2>
             <Carousel />
             <hr>
-           
-            <h2 class="text-blue">Scrollspy</h2>
-            <div class="bg-grey pa-30">
-                <Scrollspys />
-            </div>
-            <hr>
 
             <h2 class="text-blue">Svg Icon</h2>
             <SvgIcon />
@@ -136,7 +130,6 @@
     import Phone from './components/phone.vue';
     import Carousel from './components/carouselSection.vue';
     import Address from './components/address.vue';
-    import Scrollspys from '@/components/scrollspys.vue';
     import SearchType from '@/components/search.vue';
     import Tables from '@/components/tables.vue';
     import SvgIcon from '@/components/svgIcon.vue';
